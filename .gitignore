@@ -3,3 +3,10 @@
 .sass-cache
 _site
 Gemfile.lock
+
+
+# Development Ignores
+index.md
+about.md
+404.html
+_config.yml
