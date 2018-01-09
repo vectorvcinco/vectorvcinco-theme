@@ -1,0 +1,17 @@
+<div class="list-group p-5">
+  {% if site.social.facebook %}
+  <a class="list-group-item list-group-item-action border-0" href="https://facebook.com/{{ site.social.facebook }}">Facebook</a>
+  {% endif %}
+  {% if site.social.instagram %}
+  <a class="list-group-item list-group-item-action border-0" href="https://www.instagram.com/{{ site.social.instagram }}">Instagram</a>
+  {% endif %}
+  {% if site.social.pinterest %}
+  <a class="list-group-item list-group-item-action border-0" href="https://www.pinterest.com.mx/{{ site.social.pinterest }}">Pinterest</a>
+  {% endif %}
+  {% if site.social.tumblr %}
+  <a class="list-group-item list-group-item-action border-0" href="https://{{ site.social.tumblr }}.tumblr.com">Tumblr</a>
+  {% endif %}
+  {% if site.social.email %}
+  <a class="list-group-item list-group-item-action border-0" href="mailto:{{ site.social.email }}?Subject=Contact">Contacto</a>
+  {% endif %}
+</div>
