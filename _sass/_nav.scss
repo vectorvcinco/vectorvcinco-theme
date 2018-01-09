@@ -1,8 +1,13 @@
 nav {
   height: 100vh;
+  position: fixed;
 
   a {
     color: theme-color(primary) !important;
+  }
+
+  img {
+    width: 80%;
   }
 
 }
