@@ -1,5 +1,7 @@
 <div class="list-group p-5">
+  <a class="list-group-item list-group-item-action bg-light border-bottom-0 border-right-0 border-0" href="{{ "/" | relative_url }}">Home</a>
   {% for link in site.links%}
-  <a class="list-group-item list-group-item-action bg-light border-bottom-0 border-right-0 border-left-0 {% if forloop.first %} border-0 {% endif %}" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
+  <a class="list-group-item list-group-item-action bg-light border-bottom-0 border-right-0 border-left-0" href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
   {% endfor %}
+  <a class="list-group-item list-group-item-action bg-light border-bottom-0 border-right-0 border-left-0" href="{{ "about" | relative_url }}">About</a>
 </div>
