@@ -1,5 +1,32 @@
 ---
 layout: default
 ---
+<div class="container pt-3 navwrapper">
+  <h2 class="text-center">{{ page.title }}</h2>
+  <hr class="bg-primary">
 
-{{ content }}
+  <div class="row">
+    <div class="col-sm-7">
+      {% include portfolio_carousel.html images=page.images title=page.title %}
+    </div>
+    <div class="col px-2 text-left">
+      {{ content }}
+    </div>
+  </div>
+
+  <hr class="bg-primary">
+
+  <div class="row">
+    <div class="col text-left text-dark">
+      {% if page.client %}
+      <p><span class="font-weight-bold">Client:</span> {{ page.client }}</p>
+      {% endif %}
+      {% if page.materials %}
+      <p><span class="font-weight-bold">Meterials:</span> {{ page.materials }}</p>
+      {% endif %}
+      {% if page.fecha %}
+      <p><span class="font-weight-bold">Date:</span> {{ page.fecha }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>

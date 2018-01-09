@@ -1,10 +1,10 @@
 {% for post in site.posts %}
 
-<div class="modal fade" id="{{ post.project_name | url_encode }}-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="{{ post.title | url_encode }}-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{ post.project_name }}</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{ post.title }}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -12,7 +12,7 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-sm-7">
-            {% include portfolio_carousel.html images=post.images project_name=post.project_name %}
+            {% include portfolio_carousel.html images=post.images title=post.title %}
           </div>
           <div class="col px-2 text-left">
             {{ post.content }}

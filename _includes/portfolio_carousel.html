@@ -1,9 +1,9 @@
-<div id="carousel-{{ include.project_name | url_encode }}" class="carousel slide" data-ride="carousel">
+<div id="carousel-{{ include.title | url_encode }}" class="carousel slide" data-ride="carousel">
 
   {% if include.images.size > 1 %}
   <ol class="carousel-indicators">
     {% for image in include.images %}
-    <li data-target="#carousel-{{ include.project_name | url_encode }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first%}active{% endif %}"></li>
+    <li data-target="#carousel-{{ include.title | url_encode }}" data-slide-to="{{ forloop.index0 }}" class="{% if forloop.first%}active{% endif %}"></li>
     {% endfor %}
   </ol>
   {% endif %}
@@ -11,17 +11,17 @@
   <div class="carousel-inner">
     {% for image in include.images %}
     <div class="carousel-item {% if forloop.first%}active{% endif %}">
-      <img class="d-block w-100" src="{{ image }}" alt="{{ include.project_name }} photo">
+      <img class="d-block w-100" src="{{ image }}" alt="{{ include.title }} photo">
     </div>
     {% endfor %}
   </div>
 
   {% if include.images.size > 1 %}
-  <a class="carousel-control-prev" href="#carousel-{{ include.project_name | url_encode }}" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#carousel-{{ include.title | url_encode }}" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carousel-{{ include.project_name | url_encode }}" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carousel-{{ include.title | url_encode }}" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
